@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-tunnel-bear: #cce08b;
+}
+
+input:where(:not([type])),
+[type="text"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select {
+  @apply rounded border-gray-300 w-full focus:ring-tunnel-bear;
+}
